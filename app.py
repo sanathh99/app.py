@@ -3,7 +3,7 @@ import pickle
 import os
 from streamlit_option_menu import option_menu
 
-st.set_page_config(page_title="Mulitple Disease Prediction",layout="wide", page_icon="👨‍🦰🤶")
+st.set_page_config(page_title="Disease Prediction",layout="wide", page_icon="👨‍🦰🤶")
 
 working_dir = os.path.dirname(os.path.abspath(__file__))
 
@@ -22,14 +22,6 @@ NewGlucose_Normal=0
 NewGlucose_Overweight=0
 NewGlucose_Secret=0
 
-with st.sidebar:
-    selected = option_menu("Mulitple Disease Prediction", 
-                ['Diabetes Prediction',
-                 'Heart Disease Prediction',
-                 'Kidney Disease Prediction'],
-                 menu_icon='hospital-fill',
-                 icons=['activity','heart', 'person'],
-                 default_index=0)
 
 if selected == 'Diabetes Prediction':
     st.title("Diabetes Prediction Using Machine Learning")
